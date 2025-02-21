@@ -55,7 +55,7 @@ wget https://raw.githubusercontent.com/Aadarshg087/Install-Kubernetes-using-Bash
 **Worker Node**
 
 ```bash
-wget https://raw.githubusercontent.com/Aadarshg087/Install-Kubernetes-using-Bash-Script/refs/heads/main/masterSC.sh
+wget https://raw.githubusercontent.com/Aadarshg087/Install-Kubernetes-using-Bash-Script/refs/heads/main/workerSC.sh
 ```
 
 After downloading the files.

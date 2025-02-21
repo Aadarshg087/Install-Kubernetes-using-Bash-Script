@@ -61,4 +61,4 @@ echo -e "\n"
 
 kubeadm token create --print-join-command
 
-echo "\nCopy the IP, Token and Hash from here"
+echo -e "\nCopy the IP, Token and Hash from here"
