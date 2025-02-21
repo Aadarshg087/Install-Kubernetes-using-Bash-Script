@@ -49,5 +49,37 @@
 **Master Node:**
 
 ```bash
-wget [https://raw.githubusercontent.com/Aadarshg087/Install-Kubernetes-using-Bash-Script/refs/heads/main/masterSC.sh](https://raw.githubusercontent.com/Aadarshg087/Install-Kubernetes-using-Bash-Script/refs/heads/main/masterSC.sh)
+wget https://raw.githubusercontent.com/Aadarshg087/Install-Kubernetes-using-Bash-Script/refs/heads/main/masterSC.sh
+```
+
+**Worker Node**
+
+```bash
+wget https://raw.githubusercontent.com/Aadarshg087/Install-Kubernetes-using-Bash-Script/refs/heads/main/masterSC.sh
+```
+
+After downloading the files.
+
+Run this command on Master Node
+
+```bash
+bash masterSC.sh
+```
+
+Run this command on Worker Node
+
+```bash
+bash workerSC.sh
+```
+
+### Important Notes:
+
+- **Master Node Setup:** After running the master script, carefully copy the IP address, token, and hash from the output. These values are essential for configuring the worker nodes.
+
+- **Worker Node Setup:** After executing the worker script on each worker node, a command will be displayed at the end of the output. Copy this command. Replace the placeholders for the IP address, token, and hash with the values you copied from the master node output. Then, run the modified command on the worker node.
+
+Now, your Kubernetes is installed
+
+```bash
+kubectl get nodes
 ```
