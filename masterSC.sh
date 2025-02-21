@@ -33,7 +33,6 @@ sudo apt-get install -y containerd.io
 containerd config default | sed -e 's/SystemdCgroup = false/SystemdCgroup = true/' -e 's/sandbox_image = "registry.k8s.io\/pause:3.6"/sandbox_image = "registry.k8s.io\/pause:3.9"/' | sudo tee /etc/containerd/config.toml
 
 sudo systemctl restart containerd
-sudo systemctl status containerd
 
 
 sudo apt-get update
@@ -62,4 +61,4 @@ echo -e "\n"
 
 kubeadm token create --print-join-command
 
-echo "Copy the IP, Token and Hash from here"
+echo "\nCopy the IP, Token and Hash from here"
