@@ -1,5 +1,23 @@
 # Install Kubernetes using Bash Script
 
+## Two Ways to Implement Kubernetes:
+
+### 1. Manually Create a Cluster
+
+- No ingress (load balancer) involvement → use **NodePort** type service to expose the application.
+- YAML files remain mostly the same, just minor edits.
+
+### 2. Use AWS EKS
+
+- Required if ingress is involved (routing/load balancing).
+- EKS is AWS’s managed Kubernetes service.
+- Handles nodes, pods scaling (even using Fargate).
+- Slightly complex, needs strong internet, additional ingress YAML configuration.
+
+
+---
+## Manual Kubernetes Cluster Setup
+
 ## Prerequisites
 
 - Ubuntu OS (Xenial or later)
