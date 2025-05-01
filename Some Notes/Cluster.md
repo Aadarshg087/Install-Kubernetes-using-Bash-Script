@@ -70,12 +70,12 @@ metadata:
   name: my-service
 spec:
   selector:
-    app.kubernetes.io/name: MyApp # (MUST match Deployment labels correctly)
+    app: nginx # (MUST match Deployment labels correctly)
+  type: NodePort
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 9376 # (Must align with containerPort or app logic)
-  type: NodePort # (For manual setup without ingress)
+      targetPort: 80 # (Must align with containerPort or app logic)
 ```
 
 ---
