@@ -1,0 +1,11 @@
+#Install Minikube
+
+ssh -i <your-key.pem> -L 8001:127.0.0.1:8001 ubuntu@<EC2-PUBLIC-IP>
+
+
+kubectl proxy
+
+kubectl proxy --address=127.0.0.1 --accept-hosts='^*$'
+
+# Open in browser
+http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/
