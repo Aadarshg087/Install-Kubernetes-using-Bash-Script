@@ -31,6 +31,8 @@ minikube kubectl -- apply -f app.yaml
 # install package for port forwarding
 sudo apt-get install -y socat
 
+sudo socat TCP-LISTEN:31000,fork,reuseaddr TCP:$(minikube ip):31000
+
 #get the code locally
 curl localhost:31000
 
