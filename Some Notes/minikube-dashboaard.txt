@@ -2,7 +2,6 @@
 
 ssh -i <your-key.pem> -L 8001:127.0.0.1:8001 ubuntu@<EC2-PUBLIC-IP>
 
-
 kubectl proxy
 
 kubectl proxy --address=127.0.0.1 --accept-hosts='^*$'

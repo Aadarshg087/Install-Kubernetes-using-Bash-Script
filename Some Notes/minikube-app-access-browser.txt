@@ -1,0 +1,45 @@
+## ACCESS APPLICATION USING MINIKUBE
+
+
+# Install required dependencies
+sudo apt-get update
+sudo apt-get install -y apt-transport-https ca-certificates curl
+
+# Install Docker (if not already installed)
+sudo apt-get install -y docker.io
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo usermod -aG docker $USER
+
+# Download Minikube
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+# Install kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+
+
+---
+# Login logout
+minikube start --listen-address=0.0.0.0 --driver=docker
+
+# Create yaml files and apply the files
+minikube kubectl -- apply -f app.yaml
+
+
+# install package for port forwarding
+sudo apt-get install -y socat
+
+#get the code locally
+curl localhost:31000
+
+# get the application on browser
+http://EC2IP:NODEPORT
+
+## it will only work until the socat is running
+
+
+
+## FIGURE OUT THE DASHBOARD ON THIS CONFIG
+# Refer to the minikube-dashboard.txt
