@@ -21,7 +21,7 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
 
 ---
-# Login logout
+# Login logout (exit the terminal)
 minikube start --listen-address=0.0.0.0 --driver=docker
 
 # Create yaml files and apply the files
