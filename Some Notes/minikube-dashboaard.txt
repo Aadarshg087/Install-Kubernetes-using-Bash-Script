@@ -1,8 +1,9 @@
 #Install Minikube
 
-minikube dashboard
 
 ssh -i <your-key.pem> -L 8001:127.0.0.1:8001 ubuntu@<EC2-PUBLIC-IP>
+
+minikube dashboard
 
 kubectl proxy
 
